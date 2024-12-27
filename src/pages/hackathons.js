@@ -73,7 +73,7 @@ const Hackathons = () => {
                     </div>
                     <div className="ml-6 flex flex-col justify-between">
                         <h2 className="text-2xl font-semibold text-gray-800">{hackathon.title}</h2>
-                        <p className="mt-4 text-gray-600">{hackathon.description}</p>
+                        <p className="mt-4 text-gray-600 break-words">{hackathon.description}</p>
                         <p className="mt-4 text-sm text-gray-500">
                             Start: {hackathon.startDate?.toDate()?.toString() || 'Invalid start date'}
                         </p>
