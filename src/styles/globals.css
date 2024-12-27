@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import custom CSS for auth */
+@import '../components/Auth/Auth.module.css';
+
+/* Global styles (not in CSS modules) */
+/* Global styles (Move global styles like form and body here) */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  form {
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  form h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  

@@ -1,0 +1,107 @@
+/* Component-specific styles in CSS Module */
+
+/* Box container for the form */
+.box {
+  position: relative;
+  width: 380px;
+  height: 420px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.box::before,
+.box::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(60deg, #ff0080, #ff8c00);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+.box::after {
+  animation-delay: -3s;
+}
+
+/* Keyframe for box animation */
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Styling for the form elements */
+.borderLine {
+  position: absolute;
+  top: 0;
+  inset: 0;
+}
+
+.inputBox {
+  position: relative;
+  width: 100%;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #fff;
+}
+
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span {
+  transform: translateY(-18px);
+  font-size: 12px;
+  color: #ff8c00;
+}
+
+/* Links section for login/signup */
+.links {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 14px;
+}
+
+.links a {
+  color: #ff8c00;
+  text-decoration: none;
+}
+
+#submit {
+  padding: 10px;
+  background: #ff8c00;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+#submit:hover {
+  background: #ff6600;
+  color: blue;
+}
